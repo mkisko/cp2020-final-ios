@@ -15,9 +15,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var enterButtonOutlet: UIButton!
     @IBAction func enterButton(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "Enter", sender: nil)
     }
     
+    @IBOutlet weak var eyeToggleOutlet: UIButton!
+    @IBAction func eyeToggle(_ sender: UIButton) {
+        if passwordField.isSecureTextEntry {
+            passwordField.isSecureTextEntry.toggle()
+            eyeToggleOutlet.setImage(UIImage(named: "eye_close"), for: .normal)
+        } else {
+            passwordField.isSecureTextEntry.toggle()
+            eyeToggleOutlet.setImage(UIImage(named: "eye_open"), for: .normal)
+        }
+    }
     @IBOutlet weak var numberView: UIView!
     
     @IBOutlet weak var passwordView: UIView!

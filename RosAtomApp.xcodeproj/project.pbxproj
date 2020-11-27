@@ -24,6 +24,7 @@
 		F3ACF3B22571495E00BB4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ACF3B12571495E00BB4739 /* Assets.xcassets */; };
 		F3ACF3C6257153C100BB4739 /* LaunchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */; };
 		F3ACF3CE257158C000BB4739 /* TaskListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */; };
+		F3ACF3E125719A6700BB4739 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3E025719A6600BB4739 /* Tabbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		F3ACF3B42571495E00BB4739 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInterfaceController.swift; sourceTree = "<group>"; };
 		F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListInterfaceController.swift; sourceTree = "<group>"; };
+		F3ACF3E025719A6600BB4739 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				F3ACF38D2571495900BB4739 /* Assets.xcassets */,
 				F3ACF38F2571495900BB4739 /* LaunchScreen.storyboard */,
 				F3ACF3922571495900BB4739 /* Info.plist */,
+				F3ACF3E025719A6600BB4739 /* Tabbar.swift */,
 			);
 			path = RosAtomApp;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				F3ACF3892571495700BB4739 /* ViewController.swift in Sources */,
 				F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */,
 				F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */,
+				F3ACF3E125719A6700BB4739 /* Tabbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
