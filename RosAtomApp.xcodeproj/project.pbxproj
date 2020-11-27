@@ -29,6 +29,7 @@
 		F3ACF3EC25719F7D00BB4739 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */; };
 		F3ACF4332571A96D00BB4739 /* ActiveTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF4322571A96D00BB4739 /* ActiveTaskCell.swift */; };
 		F3ACF43B2571A9AA00BB4739 /* InactiveTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF43A2571A9AA00BB4739 /* InactiveTaskCell.swift */; };
+		F3ACF4422571BCD700BB4739 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF4412571BCD600BB4739 /* TaskModel.swift */; };
 		FA46B291FDC841F91C8F3232 /* Pods_RosAtomApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989BFA7831F9103892F58518 /* Pods_RosAtomApp_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F3ACF4322571A96D00BB4739 /* ActiveTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskCell.swift; sourceTree = "<group>"; };
 		F3ACF43A2571A9AA00BB4739 /* InactiveTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTaskCell.swift; sourceTree = "<group>"; };
+		F3ACF4412571BCD600BB4739 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		F4F967E9E40074D91E6E836B /* Pods-RosAtomApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp.debug.xcconfig"; path = "Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 		F3ACF3832571495700BB4739 /* RosAtomApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3ACF4402571BCC400BB4739 /* Models */,
 				F3ACF3F92571A04000BB4739 /* Application */,
 				F3ACF3F52571A02200BB4739 /* ViewControllers */,
 				F3ACF38A2571495700BB4739 /* Main.storyboard */,
@@ -249,6 +252,14 @@
 				F3ACF43A2571A9AA00BB4739 /* InactiveTaskCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F3ACF4402571BCC400BB4739 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3ACF4412571BCD600BB4739 /* TaskModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +490,7 @@
 				F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */,
 				F3ACF3EC25719F7D00BB4739 /* MainViewController.swift in Sources */,
 				F3ACF4332571A96D00BB4739 /* ActiveTaskCell.swift in Sources */,
+				F3ACF4422571BCD700BB4739 /* TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

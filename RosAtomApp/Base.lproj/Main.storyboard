@@ -166,15 +166,15 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.25490196078431371" green="0.25098039215686274" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveCell" rowHeight="180" id="vRr-k2-TJk" customClass="ActiveTaskCell" customModule="RosAtomApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveCell" rowHeight="164.5" id="vRr-k2-TJk" customClass="ActiveTaskCell" customModule="RosAtomApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="164.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRr-k2-TJk" id="zXn-Ou-hFC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="164.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cj4-2T-U6r">
-                                                    <rect key="frame" x="20" y="21" width="374" height="138"/>
+                                                    <rect key="frame" x="20" y="13" width="374" height="138.5"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDn-ud-Dah">
                                                             <rect key="frame" x="8" y="8" width="14" height="14"/>
@@ -185,7 +185,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 ноября 11:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKf-Wf-cle">
-                                                            <rect key="frame" x="10" y="113" width="354" height="17"/>
+                                                            <rect key="frame" x="10" y="113" width="354" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="17"/>
                                                             <color key="textColor" red="0.25490196078431371" green="0.25098039215686274" blue="0.396078431372549" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -213,13 +213,12 @@
                                                         <constraint firstAttribute="bottom" secondItem="qKf-Wf-cle" secondAttribute="bottom" constant="8" id="EGF-v8-hkh"/>
                                                         <constraint firstAttribute="trailing" secondItem="3x7-Uy-B2d" secondAttribute="trailing" constant="10" id="Iul-lz-dac"/>
                                                         <constraint firstItem="qKf-Wf-cle" firstAttribute="leading" secondItem="cj4-2T-U6r" secondAttribute="leading" constant="10" id="Oig-9X-DAd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="enz-HO-rNf" secondAttribute="trailing" constant="10" id="S69-Uu-p4E"/>
                                                         <constraint firstItem="qKf-Wf-cle" firstAttribute="top" secondItem="3x7-Uy-B2d" secondAttribute="bottom" constant="6" id="V0F-YU-d0w"/>
                                                         <constraint firstItem="enz-HO-rNf" firstAttribute="leading" secondItem="FDn-ud-Dah" secondAttribute="trailing" constant="10" id="ZaI-vV-PFm"/>
                                                         <constraint firstItem="FDn-ud-Dah" firstAttribute="top" secondItem="cj4-2T-U6r" secondAttribute="top" constant="8" id="bgk-Fd-6Yu"/>
                                                         <constraint firstItem="3x7-Uy-B2d" firstAttribute="top" secondItem="enz-HO-rNf" secondAttribute="bottom" constant="3" id="ckC-4L-yDd"/>
+                                                        <constraint firstItem="3x7-Uy-B2d" firstAttribute="centerY" secondItem="cj4-2T-U6r" secondAttribute="centerY" id="l6R-KN-QRJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="qKf-Wf-cle" secondAttribute="trailing" constant="10" id="o9L-M6-r5e"/>
-                                                        <constraint firstAttribute="trailing" secondItem="enz-HO-rNf" secondAttribute="trailing" constant="10" id="pIO-Pf-Qks"/>
                                                         <constraint firstAttribute="trailing" secondItem="enz-HO-rNf" secondAttribute="trailing" constant="10" id="qXB-5u-0sP"/>
                                                         <constraint firstItem="3x7-Uy-B2d" firstAttribute="leading" secondItem="cj4-2T-U6r" secondAttribute="leading" constant="10" id="w60-1y-XAh"/>
                                                     </constraints>
@@ -227,16 +226,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cj4-2T-U6r" firstAttribute="trailing" secondItem="zXn-Ou-hFC" secondAttribute="trailingMargin" id="k8v-hS-Xul"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cj4-2T-U6r" secondAttribute="bottom" constant="10" id="s4A-5h-Juz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cj4-2T-U6r" secondAttribute="bottom" constant="2" id="s4A-5h-Juz"/>
                                                 <constraint firstItem="cj4-2T-U6r" firstAttribute="leading" secondItem="zXn-Ou-hFC" secondAttribute="leadingMargin" id="wVB-QZ-6Lf"/>
-                                                <constraint firstItem="cj4-2T-U6r" firstAttribute="top" secondItem="zXn-Ou-hFC" secondAttribute="topMargin" constant="10" id="zt9-Mm-sn5"/>
+                                                <constraint firstItem="cj4-2T-U6r" firstAttribute="top" secondItem="zXn-Ou-hFC" secondAttribute="topMargin" constant="2" id="zt9-Mm-sn5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="DateLabel" destination="qKf-Wf-cle" id="9ct-I4-98A"/>
-                                            <outlet property="DescriptionLabel" destination="qKf-Wf-cle" id="RFD-CS-xxp"/>
                                             <outlet property="TaskStatusLabel" destination="enz-HO-rNf" id="TLM-7w-JwI"/>
                                             <outlet property="circleView" destination="FDn-ud-Dah" id="RqZ-7N-V30"/>
+                                            <outlet property="descriptionLabel" destination="3x7-Uy-B2d" id="n6N-mW-hg8"/>
                                             <outlet property="mainView" destination="cj4-2T-U6r" id="A18-QL-AgW"/>
                                         </connections>
                                     </tableViewCell>

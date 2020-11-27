@@ -11,9 +11,9 @@ class ActiveTaskCell: UITableViewCell {
 
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var TaskStatusLabel: UILabel!
-    @IBOutlet weak var DescriptionLabel: UILabel!
     @IBOutlet weak var DateLabel: UILabel!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mainView: UIView!
     
     override func awakeFromNib() {
@@ -27,7 +27,6 @@ class ActiveTaskCell: UITableViewCell {
 
     private func setubSubviews() {
         self.backgroundColor = .white
-        
         circleView.layer.cornerRadius = 7
         
         mainView.layer.cornerRadius = 15
