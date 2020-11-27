@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0CD696D65FB2B163B6AB0C /* Pods_RosAtomApp_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C99AA82A06EF5C76015561 /* Pods_RosAtomApp_WatchKit_App.framework */; };
+		0F55FFA6408291B78F4CA4FF /* Pods_RosAtomApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C5A027C682D12214ADBC23 /* Pods_RosAtomApp.framework */; };
 		F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3842571495700BB4739 /* AppDelegate.swift */; };
 		F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3862571495700BB4739 /* SceneDelegate.swift */; };
 		F3ACF3892571495700BB4739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3882571495700BB4739 /* ViewController.swift */; };
@@ -24,7 +26,10 @@
 		F3ACF3B22571495E00BB4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ACF3B12571495E00BB4739 /* Assets.xcassets */; };
 		F3ACF3C6257153C100BB4739 /* LaunchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */; };
 		F3ACF3CE257158C000BB4739 /* TaskListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */; };
-		F3ACF3E125719A6700BB4739 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3E025719A6600BB4739 /* Tabbar.swift */; };
+		F3ACF3EC25719F7D00BB4739 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */; };
+		F3ACF4332571A96D00BB4739 /* ActiveTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF4322571A96D00BB4739 /* ActiveTaskCell.swift */; };
+		F3ACF43B2571A9AA00BB4739 /* InactiveTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF43A2571A9AA00BB4739 /* InactiveTaskCell.swift */; };
+		FA46B291FDC841F91C8F3232 /* Pods_RosAtomApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 989BFA7831F9103892F58518 /* Pods_RosAtomApp_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05C99AA82A06EF5C76015561 /* Pods_RosAtomApp_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosAtomApp_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF8B367374F06D4306BB633 /* Pods-RosAtomApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-RosAtomApp WatchKit App/Pods-RosAtomApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		8A2292D0476320C65809ABFD /* Pods-RosAtomApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-RosAtomApp WatchKit Extension/Pods-RosAtomApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		973DFDB9B1E9BF703F82BA83 /* Pods-RosAtomApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-RosAtomApp WatchKit App/Pods-RosAtomApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		989BFA7831F9103892F58518 /* Pods_RosAtomApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosAtomApp_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C5A027C682D12214ADBC23 /* Pods_RosAtomApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosAtomApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA58A9BCE446F22F24FC4F7 /* Pods-RosAtomApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-RosAtomApp WatchKit Extension/Pods-RosAtomApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		EF513F08ADB5E754F3DC6780 /* Pods-RosAtomApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp.release.xcconfig"; path = "Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp.release.xcconfig"; sourceTree = "<group>"; };
 		F3ACF3812571495700BB4739 /* RosAtomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosAtomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ACF3842571495700BB4739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3ACF3862571495700BB4739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,14 +105,26 @@
 		F3ACF3B42571495E00BB4739 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInterfaceController.swift; sourceTree = "<group>"; };
 		F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListInterfaceController.swift; sourceTree = "<group>"; };
-		F3ACF3E025719A6600BB4739 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F3ACF4322571A96D00BB4739 /* ActiveTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTaskCell.swift; sourceTree = "<group>"; };
+		F3ACF43A2571A9AA00BB4739 /* InactiveTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTaskCell.swift; sourceTree = "<group>"; };
+		F4F967E9E40074D91E6E836B /* Pods-RosAtomApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp.debug.xcconfig"; path = "Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34C7534E68957D30B438895F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F0CD696D65FB2B163B6AB0C /* Pods_RosAtomApp_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3ACF37E2571495700BB4739 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F55FFA6408291B78F4CA4FF /* Pods_RosAtomApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +132,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA46B291FDC841F91C8F3232 /* Pods_RosAtomApp_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A83EA65A8A5C88F4B66A7505 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0C5A027C682D12214ADBC23 /* Pods_RosAtomApp.framework */,
+				05C99AA82A06EF5C76015561 /* Pods_RosAtomApp_WatchKit_App.framework */,
+				989BFA7831F9103892F58518 /* Pods_RosAtomApp_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CECF8F2D2686AE4AA2F4A419 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4F967E9E40074D91E6E836B /* Pods-RosAtomApp.debug.xcconfig */,
+				EF513F08ADB5E754F3DC6780 /* Pods-RosAtomApp.release.xcconfig */,
+				973DFDB9B1E9BF703F82BA83 /* Pods-RosAtomApp WatchKit App.debug.xcconfig */,
+				4DF8B367374F06D4306BB633 /* Pods-RosAtomApp WatchKit App.release.xcconfig */,
+				CCA58A9BCE446F22F24FC4F7 /* Pods-RosAtomApp WatchKit Extension.debug.xcconfig */,
+				8A2292D0476320C65809ABFD /* Pods-RosAtomApp WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F3ACF3782571495700BB4739 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +169,8 @@
 				F3ACF3992571495900BB4739 /* RosAtomApp WatchKit App */,
 				F3ACF3A82571495C00BB4739 /* RosAtomApp WatchKit Extension */,
 				F3ACF3822571495700BB4739 /* Products */,
+				CECF8F2D2686AE4AA2F4A419 /* Pods */,
+				A83EA65A8A5C88F4B66A7505 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,14 +187,12 @@
 		F3ACF3832571495700BB4739 /* RosAtomApp */ = {
 			isa = PBXGroup;
 			children = (
-				F3ACF3842571495700BB4739 /* AppDelegate.swift */,
-				F3ACF3862571495700BB4739 /* SceneDelegate.swift */,
-				F3ACF3882571495700BB4739 /* ViewController.swift */,
+				F3ACF3F92571A04000BB4739 /* Application */,
+				F3ACF3F52571A02200BB4739 /* ViewControllers */,
 				F3ACF38A2571495700BB4739 /* Main.storyboard */,
 				F3ACF38D2571495900BB4739 /* Assets.xcassets */,
 				F3ACF38F2571495900BB4739 /* LaunchScreen.storyboard */,
 				F3ACF3922571495900BB4739 /* Info.plist */,
-				F3ACF3E025719A6600BB4739 /* Tabbar.swift */,
 			);
 			path = RosAtomApp;
 			sourceTree = "<group>";
@@ -174,6 +223,34 @@
 			path = "RosAtomApp WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		F3ACF3F52571A02200BB4739 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3ACF4312571A94800BB4739 /* Cells */,
+				F3ACF3882571495700BB4739 /* ViewController.swift */,
+				F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F3ACF3F92571A04000BB4739 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F3ACF3842571495700BB4739 /* AppDelegate.swift */,
+				F3ACF3862571495700BB4739 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F3ACF4312571A94800BB4739 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3ACF4322571A96D00BB4739 /* ActiveTaskCell.swift */,
+				F3ACF43A2571A9AA00BB4739 /* InactiveTaskCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,10 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3ACF3BF2571495E00BB4739 /* Build configuration list for PBXNativeTarget "RosAtomApp" */;
 			buildPhases = (
+				9E7CFA333BC22111EE8BC028 /* [CP] Check Pods Manifest.lock */,
 				F3ACF37D2571495700BB4739 /* Sources */,
 				F3ACF37E2571495700BB4739 /* Frameworks */,
 				F3ACF37F2571495700BB4739 /* Resources */,
 				F3ACF3BE2571495E00BB4739 /* Embed Watch Content */,
+				52658A6674B35ED337E02634 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,8 +279,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3ACF3BB2571495E00BB4739 /* Build configuration list for PBXNativeTarget "RosAtomApp WatchKit App" */;
 			buildPhases = (
+				431C5A319C096BE1F9C390B3 /* [CP] Check Pods Manifest.lock */,
 				F3ACF3932571495900BB4739 /* Resources */,
 				F3ACF3BA2571495E00BB4739 /* Embed App Extensions */,
+				34C7534E68957D30B438895F /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3ACF3B72571495E00BB4739 /* Build configuration list for PBXNativeTarget "RosAtomApp WatchKit Extension" */;
 			buildPhases = (
+				E05DAC225C43019E03C2182C /* [CP] Check Pods Manifest.lock */,
 				F3ACF3A02571495C00BB4739 /* Sources */,
 				F3ACF3A12571495C00BB4739 /* Frameworks */,
 				F3ACF3A22571495C00BB4739 /* Resources */,
@@ -300,15 +382,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		431C5A319C096BE1F9C390B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RosAtomApp WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52658A6674B35ED337E02634 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7CFA333BC22111EE8BC028 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RosAtomApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05DAC225C43019E03C2182C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RosAtomApp WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F3ACF37D2571495700BB4739 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F3ACF3892571495700BB4739 /* ViewController.swift in Sources */,
+				F3ACF43B2571A9AA00BB4739 /* InactiveTaskCell.swift in Sources */,
 				F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */,
 				F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */,
-				F3ACF3E125719A6700BB4739 /* Tabbar.swift in Sources */,
+				F3ACF3EC25719F7D00BB4739 /* MainViewController.swift in Sources */,
+				F3ACF4332571A96D00BB4739 /* ActiveTaskCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +651,7 @@
 		};
 		F3ACF3B82571495E00BB4739 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA58A9BCE446F22F24FC4F7 /* Pods-RosAtomApp WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +673,7 @@
 		};
 		F3ACF3B92571495E00BB4739 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A2292D0476320C65809ABFD /* Pods-RosAtomApp WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +696,7 @@
 		};
 		F3ACF3BC2571495E00BB4739 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973DFDB9B1E9BF703F82BA83 /* Pods-RosAtomApp WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -543,6 +716,7 @@
 		};
 		F3ACF3BD2571495E00BB4739 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF8B367374F06D4306BB633 /* Pods-RosAtomApp WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -563,6 +737,7 @@
 		};
 		F3ACF3C02571495E00BB4739 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4F967E9E40074D91E6E836B /* Pods-RosAtomApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,6 +758,7 @@
 		};
 		F3ACF3C12571495E00BB4739 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF513F08ADB5E754F3DC6780 /* Pods-RosAtomApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
