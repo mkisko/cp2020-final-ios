@@ -1,5 +1,5 @@
 //
-//  InterfaceController.swift
+//  NewTaskInterfaceController.swift
 //  RosAtomApp WatchKit Extension
 //
 //  Created by Admin on 27.11.2020.
@@ -9,7 +9,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class NewTaskInterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.

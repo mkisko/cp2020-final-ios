@@ -17,11 +17,13 @@
 		F3ACF39C2571495900BB4739 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3ACF39A2571495900BB4739 /* Interface.storyboard */; };
 		F3ACF39E2571495B00BB4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ACF39D2571495B00BB4739 /* Assets.xcassets */; };
 		F3ACF3A52571495C00BB4739 /* RosAtomApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3ACF3A42571495C00BB4739 /* RosAtomApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F3ACF3AA2571495C00BB4739 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3A92571495C00BB4739 /* InterfaceController.swift */; };
+		F3ACF3AA2571495C00BB4739 /* NewTaskInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3A92571495C00BB4739 /* NewTaskInterfaceController.swift */; };
 		F3ACF3AC2571495C00BB4739 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3AB2571495C00BB4739 /* ExtensionDelegate.swift */; };
 		F3ACF3AE2571495C00BB4739 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3AD2571495C00BB4739 /* NotificationController.swift */; };
 		F3ACF3B02571495C00BB4739 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3AF2571495C00BB4739 /* ComplicationController.swift */; };
 		F3ACF3B22571495E00BB4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ACF3B12571495E00BB4739 /* Assets.xcassets */; };
+		F3ACF3C6257153C100BB4739 /* LaunchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */; };
+		F3ACF3CE257158C000BB4739 /* TaskListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,13 +82,15 @@
 		F3ACF39D2571495B00BB4739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3ACF39F2571495B00BB4739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3ACF3A42571495C00BB4739 /* RosAtomApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RosAtomApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3ACF3A92571495C00BB4739 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F3ACF3A92571495C00BB4739 /* NewTaskInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskInterfaceController.swift; sourceTree = "<group>"; };
 		F3ACF3AB2571495C00BB4739 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F3ACF3AD2571495C00BB4739 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F3ACF3AF2571495C00BB4739 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F3ACF3B12571495E00BB4739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3ACF3B32571495E00BB4739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3ACF3B42571495E00BB4739 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInterfaceController.swift; sourceTree = "<group>"; };
+		F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +158,9 @@
 		F3ACF3A82571495C00BB4739 /* RosAtomApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F3ACF3A92571495C00BB4739 /* InterfaceController.swift */,
+				F3ACF3A92571495C00BB4739 /* NewTaskInterfaceController.swift */,
+				F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */,
+				F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */,
 				F3ACF3AB2571495C00BB4739 /* ExtensionDelegate.swift */,
 				F3ACF3AD2571495C00BB4739 /* NotificationController.swift */,
 				F3ACF3AF2571495C00BB4739 /* ComplicationController.swift */,
@@ -307,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3ACF3AE2571495C00BB4739 /* NotificationController.swift in Sources */,
+				F3ACF3C6257153C100BB4739 /* LaunchInterfaceController.swift in Sources */,
+				F3ACF3CE257158C000BB4739 /* TaskListInterfaceController.swift in Sources */,
 				F3ACF3B02571495C00BB4739 /* ComplicationController.swift in Sources */,
 				F3ACF3AC2571495C00BB4739 /* ExtensionDelegate.swift in Sources */,
-				F3ACF3AA2571495C00BB4739 /* InterfaceController.swift in Sources */,
+				F3ACF3AA2571495C00BB4739 /* NewTaskInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
