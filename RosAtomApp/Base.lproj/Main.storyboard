@@ -101,29 +101,31 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBo-Kj-fUD">
-                                <rect key="frame" x="54" y="616" width="297" height="48"/>
-                                <color key="backgroundColor" red="0.42745098039215684" green="0.54509803921568623" blue="0.87058823529411766" alpha="0.54206095950704225" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="15" y="616" width="384" height="48"/>
+                                <color key="backgroundColor" red="0.44914668800000002" green="0.5661579967" blue="0.72943824530000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CZS-60-Das"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="17"/>
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="enterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Chf-yI-Hot"/>
+                                    <segue destination="WJ8-l3-kiK" kind="push" identifier="Enter" id="Ces-rT-Nfx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iSC-pZ-2jT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="7fV-nY-u6f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yBo-Kj-fUD" secondAttribute="bottom" constant="198" id="KFZ-Wp-JXs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yBo-Kj-fUD" secondAttribute="trailing" constant="63" id="WBS-Kn-0vP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yBo-Kj-fUD" secondAttribute="trailing" constant="15" id="WBS-Kn-0vP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="be3-hn-uek" secondAttribute="trailing" constant="15" id="aFH-ub-Skc"/>
                             <constraint firstItem="be3-hn-uek" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fSU-zr-kaz"/>
                             <constraint firstItem="be3-hn-uek" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iXX-ES-l8t"/>
-                            <constraint firstItem="yBo-Kj-fUD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="iw3-zV-nAF"/>
+                            <constraint firstItem="yBo-Kj-fUD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="iw3-zV-nAF"/>
                             <constraint firstItem="be3-hn-uek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rN1-i4-2S0"/>
                             <constraint firstItem="iSC-pZ-2jT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uLl-gt-4R4"/>
                             <constraint firstItem="yBo-Kj-fUD" firstAttribute="top" secondItem="be3-hn-uek" secondAttribute="bottom" constant="77" id="yjE-VA-yFv"/>
@@ -141,6 +143,57 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="FO0-M8-Ft4">
+            <objects>
+                <viewController id="sZh-XV-5OU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16H-3Y-O4b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w8l-aD-07P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="sOl-dj-tFx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmW-eS-MEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="376"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="5EJ-Mk-dKp">
+            <objects>
+                <viewController id="kS3-s1-rDQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aiq-zj-Lp9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RAe-6H-3uw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="QCN-69-bq9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5b-3b-ZRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872" y="-232"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rgy-bv-SLe">
+            <objects>
+                <tabBarController id="WJ8-l3-kiK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ydi-QH-ALc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lp9-dP-Uav">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kS3-s1-rDQ" kind="relationship" relationship="viewControllers" id="0yx-Ms-Dp2"/>
+                        <segue destination="sZh-XV-5OU" kind="relationship" relationship="viewControllers" id="VZS-pB-X1t"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cam-Ys-N7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="72"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Launch" width="136" height="174"/>
@@ -148,9 +201,6 @@
         <image name="password" width="13" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
