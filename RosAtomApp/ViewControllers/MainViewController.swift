@@ -126,13 +126,3 @@ extension MainViewController: UITableViewDataSource {
     }
     
 }
-
-
-extension MainViewController: addNewTask {
-    
-    func addTask(task: TaskModel) {
-        allTasks?.insert(task, at: 0)
-        print(task)
-        tableView.reloadData()
-    }
-}

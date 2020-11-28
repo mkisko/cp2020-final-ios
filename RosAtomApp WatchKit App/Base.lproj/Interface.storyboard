@@ -11,18 +11,18 @@
             <objects>
                 <controller id="zVq-dF-Dr3" customClass="LaunchInterfaceController" customModule="RosAtomApp_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="center" id="A3O-xV-lTg">
+                        <group width="136" height="53" alignment="center" id="A3O-xV-lTg">
                             <items>
-                                <button width="70" height="70" alignment="left" backgroundImage="plus" catalog="system" id="Wls-Yl-Ugp">
-                                    <color key="backgroundColor" red="0.086604930459999993" green="0.22544249890000001" blue="0.49806904790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <connections>
-                                        <segue destination="AgC-eL-Hgc" kind="modal" id="d93-Hk-5gy"/>
-                                    </connections>
-                                </button>
                                 <button width="70" height="70" alignment="left" backgroundImage="list.number" catalog="system" id="CCI-o9-d7Y">
                                     <color key="backgroundColor" red="0.086604930459999993" green="0.22544249890000001" blue="0.49806904790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <segue destination="gN3-Mr-Xv6" kind="push" id="4AY-9J-LfR"/>
+                                    </connections>
+                                </button>
+                                <button width="70" height="70" alignment="left" backgroundImage="plus" catalog="system" id="Wls-Yl-Ugp">
+                                    <color key="backgroundColor" red="0.086604930459999993" green="0.22544249890000001" blue="0.49806904790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <segue destination="AgC-eL-Hgc" kind="modal" id="d93-Hk-5gy"/>
                                     </connections>
                                 </button>
                             </items>
@@ -30,20 +30,19 @@
                         <group width="1" alignment="center" contentMode="scaleAspectFit" id="llP-I2-JOO">
                             <items>
                                 <label alignment="left" text="Задач сегодня" id="1Hk-PX-oSN"/>
-                                <label width="46" alignment="left" text="38" textAlignment="right" id="bUI-QO-UaR"/>
+                                <label width="46" alignment="left" text="12" textAlignment="right" id="bUI-QO-UaR"/>
                             </items>
                         </group>
                         <separator alignment="center" verticalAlignment="center" id="3xw-kk-ziX"/>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Отправить отчет" id="S5d-v5-6bU">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="modal" id="N8B-qT-6BQ"/>
+                            </connections>
+                        </button>
                         <group width="1" alignment="center" id="Odk-Xe-ZhT">
                             <items>
                                 <label alignment="left" text="Выполнено" id="NT1-yd-ttG"/>
-                                <label width="71" alignment="left" text="12" textAlignment="right" id="oNz-ea-UdE"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="center" id="dmO-BN-mOd">
-                            <items>
-                                <label alignment="left" text="Осталось" id="WZe-ZG-3gl"/>
-                                <label width="87" alignment="left" text="26" textAlignment="right" id="3Kt-HO-SRq"/>
+                                <label width="71" alignment="left" text="4" textAlignment="right" id="oNz-ea-UdE"/>
                             </items>
                         </group>
                     </items>
@@ -56,15 +55,22 @@
             <objects>
                 <controller id="gN3-Mr-Xv6" customClass="TaskListInterfaceController" customModule="RosAtomApp_WatchKit_Extension">
                     <items>
-                        <switch width="1" alignment="left" value="YES" title="Важные" id="D8I-Sd-vDt"/>
-                        <table alignment="left" id="FlU-id-8g1">
+                        <switch width="1" alignment="left" value="YES" title="Важные" id="D8I-Sd-vDt">
+                            <connections>
+                                <action selector="switch:" destination="gN3-Mr-Xv6" id="7iv-i5-4n2"/>
+                            </connections>
+                        </switch>
+                        <table alignment="left" id="SKs-gZ-lge">
                             <items>
-                                <tableRow id="2yO-sI-hx1">
-                                    <group key="rootItem" width="1" height="40" alignment="left" layout="vertical" spacing="1" id="8eF-c7-yRk"/>
+                                <tableRow id="1XS-Rs-RyR">
+                                    <group key="rootItem" width="1" alignment="left" id="jAq-La-rOh"/>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="tableView" destination="SKs-gZ-lge" id="xsu-xH-I5i"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="155" y="74"/>
@@ -122,6 +128,9 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="N8B-qT-6BQ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.number" catalog="system" width="128" height="99"/>
         <image name="paperplane.circle" catalog="system" width="128" height="121"/>

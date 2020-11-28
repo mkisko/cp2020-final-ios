@@ -16,4 +16,17 @@ struct TaskModel: Decodable {
     var comments: [String]
     let hours: Int
     let date: String
+    let completed: Completed
+    let users: [User]
+}
+
+enum Completed {
+    case main
+    case current
+    case closed
+}
+
+struct User {
+    let fio: String
+    let position: String
 }

@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol addNewTask: class {
-    func addTask(task: TaskModel)
-}
 class NewTaskViewController: UIViewController {
 
     var pickerValue: String = ""
