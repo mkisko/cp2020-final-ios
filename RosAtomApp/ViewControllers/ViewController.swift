@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var enterButtonOutlet: UIButton!
     @IBAction func enterButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Enter", sender: nil)
+        
     }
     
     @IBOutlet weak var eyeToggleOutlet: UIButton!

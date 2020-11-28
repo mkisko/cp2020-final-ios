@@ -21,7 +21,7 @@ class NewTaskViewController: UIViewController {
     @IBAction func createButtonTapped(_ sender: UIButton) {
     }
     
-    var priorityArray = ["Важно", "Срочно", "Требует контроля", "Требует отчета", "Средний приоритет"]
+    var priorityArray = ["Нет", "Важно", "Срочно", "Требует контроля", "Требует отчета", "Средний приоритет"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

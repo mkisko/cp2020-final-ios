@@ -11,7 +11,30 @@ class CurrentViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var allTasks: [TaskModel]? = [TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00"), TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00")]
+    private var allTasks: [TaskModel]? = [TaskModel(isImportent: true,
+                                                    status: "Важно",
+                                                    title: "Работа по наладке оборудования для новых конденсационных турбин.",
+                                                    description: "Необходимо произвести наладку оборудования для новой системы запуска. Первый запуск через неделю. По всем вопросам обращаться к мастеру Александру Андреевичу.",
+                                                    owner: "Карпов К.А.",
+                                                    comments: [],
+                                                    hours: 2,
+                                                    date: "25 ноября 10:30"),
+                                          TaskModel(isImportent: true,
+                                                    status: "Важно",
+                                                    title: "Доложить начальнику участка о ходе выполнения работ.",
+                                                    description: "Необходимо произвести наладку оборудования для новой системы запуска. Первый запуск через неделю. По всем вопросам обращаться к мастеру Александру Андреевичу.",
+                                                    owner: "Карпов К.А.",
+                                                    comments: [],
+                                                    hours: 5,
+                                                    date: "25 ноября 15:30"),
+                                          TaskModel(isImportent: false,
+                                                    status: "",
+                                                    title: "Ежемесячный инструктаж по технике безопасности",
+                                                    description: "Состоится в актовом зале в 18:00. Всем мастерам обеспечить явку личного состава. При себе иметь маски.",
+                                                    owner: "Карпов К.А.",
+                                                    comments: [],
+                                                    hours: 4,
+                                                    date: "25 ноября 18:00")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +87,7 @@ extension CurrentViewController: UITableViewDataSource {
         }
         
         if let task = allTasks?[indexPath.row] {
-            cell.descriptionLabel.text = task.description
+            cell.descriptionLabel.text = task.title
             cell.DateLabel.text = task.date
             if task.isImportent {
                 cell.TaskStatusLabel.isHidden = false
