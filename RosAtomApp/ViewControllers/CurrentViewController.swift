@@ -8,33 +8,45 @@
 import UIKit
 
 class CurrentViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var allTasks: [TaskModel]? = [TaskModel(isImportent: true,
+                                                    status: "Требуется отчет",
+                                                    title: "Произвести инвентаризацию на складе СИЗ",
+                                                    description: "Необходимо произвести инвентаризаю склада средств индивидуальной защиты. По завершению инвентаризации отчет мастеру цеха Державину С.В. по форме 3-В.",
+                                                    owner: User(fio: "Каплин К.А.", position: "Начальник цеха"),
+                                                    comments: [],
+                                                    hours: 2,
+                                                    date: "25 ноября 10:30",
+                                                    users: [User(fio: "Державин С.В.", position: "Мастер"), User(fio: "Степанов В.В.", position: "Зав.склада")]),
+                                          TaskModel(isImportent: true,
                                                     status: "Важно",
                                                     title: "Работа по наладке оборудования для новых конденсационных турбин.",
                                                     description: "Необходимо произвести наладку оборудования для новой системы запуска. Первый запуск через неделю. По всем вопросам обращаться к мастеру Александру Андреевичу.",
-                                                    owner: "Карпов К.А.",
+                                                    owner: User(fio: "Каплин К.А.", position: "Начальник цеха"),
                                                     comments: [],
                                                     hours: 2,
-                                                    date: "25 ноября 10:30"),
+                                                    date: "25 ноября 10:30",
+                                                    users: [User(fio: "Державин С.В.", position: "Мастер"), User(fio: "Абдурахманов А.А.", position: "Рабочий")]),
                                           TaskModel(isImportent: true,
-                                                    status: "Важно",
-                                                    title: "Доложить начальнику участка о ходе выполнения работ.",
-                                                    description: "Необходимо произвести наладку оборудования для новой системы запуска. Первый запуск через неделю. По всем вопросам обращаться к мастеру Александру Андреевичу.",
-                                                    owner: "Карпов К.А.",
-                                                    comments: [],
-                                                    hours: 5,
-                                                    date: "25 ноября 15:30"),
-                                          TaskModel(isImportent: false,
-                                                    status: "",
-                                                    title: "Ежемесячный инструктаж по технике безопасности",
-                                                    description: "Состоится в актовом зале в 18:00. Всем мастерам обеспечить явку личного состава. При себе иметь маски.",
-                                                    owner: "Карпов К.А.",
+                                                    status: "Срочно",
+                                                    title: "Заменить шарниры на СТ-320",
+                                                    description: "Необходимо произвести замену шарниров системы СТ-320 в связи с плановым обслуживанием. Первый запуск через неделю. По всем вопросам обращаться к мастеру Александру Андреевичу.",
+                                                    owner: User(fio: "Каплин К.А.", position: "Начальник цеха"),
                                                     comments: [],
                                                     hours: 4,
-                                                    date: "25 ноября 18:00")]
+                                                    date: "25 ноября 12:30",
+                                                    users: [User(fio: "Куценко П.А.", position: "Менеджер"), User(fio: "Абдурахманов А.А.", position: "Рабочий")]),
+                                           TaskModel(isImportent: true,
+                                                                                                                                                                                                               status: "Важно",
+                                                                                                                                                                                                               title: "Работа по наладке оборудования для новых конденсационных турбин.",
+                                                                                                                                                                                                               description: "Необходимо произвести наладку оборудования для новой системы запуска. Первый запуск через неделю. По всем вопросам обращаться к мастеру Александру Андреевичу.",
+                                                                                                                                                                                                               owner: User(fio: "Каплин К.А.", position: "Начальник цеха"),
+                                                                                                                                                                                                               comments: [],
+                                                                                                                                                                                                               hours: 2,
+                                                                                                                                                                                                               date: "25 ноября 10:30",
+                                                                                                                                                                                                               users: [User(fio: "Державин С.В.", position: "Мастер"), User(fio: "Абдурахманов А.А.", position: "Рабочий")])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +62,17 @@ class CurrentViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 

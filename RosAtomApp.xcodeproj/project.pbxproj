@@ -14,6 +14,7 @@
 		F317D9C12571E29F00BB5B09 /* ClosedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9C02571E29F00BB5B09 /* ClosedViewController.swift */; };
 		F317D9C625723F0700BB5B09 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9C525723F0700BB5B09 /* NewTaskViewController.swift */; };
 		F317D9D32572610700BB5B09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9D22572610700BB5B09 /* DetailViewController.swift */; };
+		F317DA242572FBED00BB5B09 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F317DA232572FBED00BB5B09 /* Speech.framework */; };
 		F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3842571495700BB4739 /* AppDelegate.swift */; };
 		F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3862571495700BB4739 /* SceneDelegate.swift */; };
 		F3ACF3892571495700BB4739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3882571495700BB4739 /* ViewController.swift */; };
@@ -94,6 +95,7 @@
 		F317D9C02571E29F00BB5B09 /* ClosedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedViewController.swift; sourceTree = "<group>"; };
 		F317D9C525723F0700BB5B09 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 		F317D9D22572610700BB5B09 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F317DA232572FBED00BB5B09 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Speech.framework; sourceTree = DEVELOPER_DIR; };
 		F3ACF3812571495700BB4739 /* RosAtomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosAtomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ACF3842571495700BB4739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3ACF3862571495700BB4739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F317DA242572FBED00BB5B09 /* Speech.framework in Frameworks */,
 				0F55FFA6408291B78F4CA4FF /* Pods_RosAtomApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +157,7 @@
 		A83EA65A8A5C88F4B66A7505 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F317DA232572FBED00BB5B09 /* Speech.framework */,
 				C0C5A027C682D12214ADBC23 /* Pods_RosAtomApp.framework */,
 				05C99AA82A06EF5C76015561 /* Pods_RosAtomApp_WatchKit_App.framework */,
 				989BFA7831F9103892F58518 /* Pods_RosAtomApp_WatchKit_Extension.framework */,

@@ -6,14 +6,16 @@
 //
 
 import UIKit
-
+import Speech
 class NewTaskViewController: UIViewController {
 
     var pickerValue: String = ""
+    var userValue: String = ""
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    @IBOutlet weak var userPicker: UIPickerView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var priorityPicker: UIPickerView!
@@ -36,8 +38,8 @@ class NewTaskViewController: UIViewController {
         } else {
             isImportent = true
         }
-        let task = TaskModel(isImportent: isImportent, status: status, title: title ?? "", description: description ?? "", owner: "Карпов К.А.", comments: [], hours: hours, date: date)
-        
+//        let task = TaskModel(isImportent: isImportent, status: status, title: title ?? "", description: description ?? "", owner: "Карпов К.А.", comments: [], hours: hours, date: date)
+//
         
         let ok = UIAlertAction(title: "Продолжить", style: .default) { [weak self] (ok) in
             self?.tabBarController?.selectedIndex = 0
@@ -46,7 +48,7 @@ class NewTaskViewController: UIViewController {
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
-    
+    var userArray = ["Губин Н.А.", "Державин С.В.", "Каплин К.А.", "Куценко П.А.", "Абдурахманов А.А."]
     var priorityArray = ["Нет", "Важно", "Срочно", "Требует контроля", "Требует отчета", "Средний приоритет"]
     
     
@@ -58,7 +60,8 @@ class NewTaskViewController: UIViewController {
     private func setupSubviews() {
         priorityPicker.dataSource = self
         priorityPicker.delegate = self
-        
+        userPicker.dataSource = self
+        userPicker.delegate = self
         timeLabel.text = ["\(Int(timeSlider.value))", "часов"].joined(separator: " ")
         timeSlider.addTarget(self, action: #selector(dragedSlider), for: .valueChanged)
         setShadow(view: descriptionTextView)
@@ -88,7 +91,17 @@ class NewTaskViewController: UIViewController {
 extension NewTaskViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerValue = priorityArray[row]
+        
+        switch pickerView {
+        case userPicker:
+            userValue = userArray[row]
+            
+        case priorityPicker:
+            pickerValue = priorityArray[row]
+            
+        default:
+            break
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -96,10 +109,28 @@ extension NewTaskViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        priorityArray.count
+        
+        var rows = 0
+        switch pickerView {
+        case userPicker:
+            rows = userArray.count
+
+        case priorityPicker:
+            rows = priorityArray.count
+
+        default:
+            break
+        }
+        
+        return rows
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return priorityArray[row]
+        
+        if pickerView == userPicker {
+            return userArray[row]
+        } else {
+            return priorityArray[row]
+        }
     }
 }

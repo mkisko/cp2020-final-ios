@@ -54,7 +54,7 @@ class DetailViewController: UIViewController {
             titleLabel.text = task.title
             dateLabel.text = task.date
             descriptionLabel.text = task.description
-            ownerLabel.text = task.owner
+            ownerLabel.text = "\(task.owner.fio)\n\(task.owner.position)"
             
             switch task.hours {
             case 1:
