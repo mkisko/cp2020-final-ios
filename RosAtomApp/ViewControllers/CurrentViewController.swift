@@ -68,7 +68,12 @@ class CurrentViewController: UIViewController {
 extension CurrentViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailVC = storyboard.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {return }
+        guard let task = allTasks?[indexPath.row] else { return }
+        detailVC.task = task
         
+        show(detailVC, sender: nil)
     }
     
 }

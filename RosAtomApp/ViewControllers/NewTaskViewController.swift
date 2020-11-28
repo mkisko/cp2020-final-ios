@@ -7,9 +7,12 @@
 
 import UIKit
 
+protocol addNewTask: class {
+    func addTask(task: TaskModel)
+}
 class NewTaskViewController: UIViewController {
 
-    
+    var pickerValue: String = ""
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -19,9 +22,36 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var priorityPicker: UIPickerView!
     @IBOutlet weak var createButton: UIButton!
     @IBAction func createButtonTapped(_ sender: UIButton) {
+        let title = titleField.text
+        let description = descriptionTextView.text
+        let hours = Int(timeSlider.value)
+        let status = pickerValue
+        let isImportent: Bool
+        let time = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
+        let date = dateFormatter.string(from: time)
+        
+        
+        if status == "Нет" {
+            isImportent = false
+        } else {
+            isImportent = true
+        }
+        let task = TaskModel(isImportent: isImportent, status: status, title: title ?? "", description: description ?? "", owner: "Карпов К.А.", comments: [], hours: hours, date: date)
+        
+        
+        let ok = UIAlertAction(title: "Продолжить", style: .default) { [weak self] (ok) in
+            self?.tabBarController?.selectedIndex = 0
+        }
+        let alert = UIAlertController(title: "Успешно", message: "Новая задача добавлена.", preferredStyle: .alert)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
     
     var priorityArray = ["Нет", "Важно", "Срочно", "Требует контроля", "Требует отчета", "Средний приоритет"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +89,10 @@ class NewTaskViewController: UIViewController {
 
 
 extension NewTaskViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerValue = priorityArray[row]
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
