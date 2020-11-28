@@ -19,6 +19,7 @@ class InactiveTaskCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setubSubviews()
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +27,7 @@ class InactiveTaskCell: UITableViewCell {
     }
 
     private func setubSubviews() {
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .white
         circleView.backgroundColor = .lightGray
         TaskStatusLabel.textColor = .lightGray
         circleView.layer.cornerRadius = 7

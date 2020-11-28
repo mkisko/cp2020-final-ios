@@ -19,6 +19,7 @@ class ActiveTaskCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setubSubviews()
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
