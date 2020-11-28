@@ -1,13 +1,13 @@
 //
-//  MainViewController.swift
+//  CurrentViewController.swift
 //  RosAtomApp
 //
-//  Created by Admin on 27.11.2020.
+//  Created by Admin on 28.11.2020.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class CurrentViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,7 +42,7 @@ class MainViewController: UIViewController {
 
 
 // MARK: - UITableViewDelegate
-extension MainViewController: UITableViewDelegate {
+extension CurrentViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -52,7 +52,7 @@ extension MainViewController: UITableViewDelegate {
 
 
 // MARK: - UITableViewDataSource
-extension MainViewController: UITableViewDataSource {
+extension CurrentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allTasks?.count ?? 0

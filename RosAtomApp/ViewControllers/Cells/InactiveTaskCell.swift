@@ -7,17 +7,42 @@
 
 import UIKit
 
-class InactiveTaskCell: ActiveTaskCell {
-
+class InactiveTaskCell: UITableViewCell {
+    
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var TaskStatusLabel: UILabel!
+    @IBOutlet weak var DateLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var mainView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor(displayP3Red: 229, green: 234, blue: 241, alpha: 1)
+        setubSubviews()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
 
-        // Configure the view for the selected state
+    private func setubSubviews() {
+        self.backgroundColor = .lightGray
+        circleView.backgroundColor = .lightGray
+        TaskStatusLabel.textColor = .lightGray
+        circleView.layer.cornerRadius = 7
+        
+        mainView.layer.cornerRadius = 15
+//        setShadow(view: mainView)
+    }
+    
+    func setShadow(view: UIView) {
+        view.layer.shadowColor = UIColor(red: 0.488, green: 0.785, blue: 1, alpha: 0.25).cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowOffset = .zero
+        view.layer.shadowRadius = 15
+        view.layer.shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 15).cgPath
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
     }
 
 }

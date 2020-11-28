@@ -1,16 +1,15 @@
 //
-//  MainViewController.swift
+//  ClosedViewController.swift
 //  RosAtomApp
 //
-//  Created by Admin on 27.11.2020.
+//  Created by Admin on 28.11.2020.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class ClosedViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     private var allTasks: [TaskModel]? = [TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00"), TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00")]
     
     override func viewDidLoad() {
@@ -21,7 +20,7 @@ class MainViewController: UIViewController {
     
     private func setupSubviews() {
         view.backgroundColor = .white
-        
+        tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
@@ -42,7 +41,7 @@ class MainViewController: UIViewController {
 
 
 // MARK: - UITableViewDelegate
-extension MainViewController: UITableViewDelegate {
+extension ClosedViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -52,14 +51,14 @@ extension MainViewController: UITableViewDelegate {
 
 
 // MARK: - UITableViewDataSource
-extension MainViewController: UITableViewDataSource {
+extension ClosedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allTasks?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActiveCell", for: indexPath) as? ActiveTaskCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "InactiveCell", for: indexPath) as? InactiveTaskCell else {
             return UITableViewCell()
         }
         
@@ -80,4 +79,5 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
+
 }

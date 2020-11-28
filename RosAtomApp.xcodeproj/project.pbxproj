@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0F0CD696D65FB2B163B6AB0C /* Pods_RosAtomApp_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C99AA82A06EF5C76015561 /* Pods_RosAtomApp_WatchKit_App.framework */; };
 		0F55FFA6408291B78F4CA4FF /* Pods_RosAtomApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C5A027C682D12214ADBC23 /* Pods_RosAtomApp.framework */; };
+		F317D9B72571DF6D00BB5B09 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9B62571DF6D00BB5B09 /* TabBarController.swift */; };
+		F317D9BC2571E0B500BB5B09 /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9BB2571E0B500BB5B09 /* CurrentViewController.swift */; };
+		F317D9C12571E29F00BB5B09 /* ClosedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9C02571E29F00BB5B09 /* ClosedViewController.swift */; };
 		F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3842571495700BB4739 /* AppDelegate.swift */; };
 		F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3862571495700BB4739 /* SceneDelegate.swift */; };
 		F3ACF3892571495700BB4739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3882571495700BB4739 /* ViewController.swift */; };
@@ -84,6 +87,9 @@
 		C0C5A027C682D12214ADBC23 /* Pods_RosAtomApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RosAtomApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA58A9BCE446F22F24FC4F7 /* Pods-RosAtomApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-RosAtomApp WatchKit Extension/Pods-RosAtomApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		EF513F08ADB5E754F3DC6780 /* Pods-RosAtomApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosAtomApp.release.xcconfig"; path = "Target Support Files/Pods-RosAtomApp/Pods-RosAtomApp.release.xcconfig"; sourceTree = "<group>"; };
+		F317D9B62571DF6D00BB5B09 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F317D9BB2571E0B500BB5B09 /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
+		F317D9C02571E29F00BB5B09 /* ClosedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedViewController.swift; sourceTree = "<group>"; };
 		F3ACF3812571495700BB4739 /* RosAtomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosAtomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ACF3842571495700BB4739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3ACF3862571495700BB4739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +238,9 @@
 				F3ACF4312571A94800BB4739 /* Cells */,
 				F3ACF3882571495700BB4739 /* ViewController.swift */,
 				F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */,
+				F317D9B62571DF6D00BB5B09 /* TabBarController.swift */,
+				F317D9BB2571E0B500BB5B09 /* CurrentViewController.swift */,
+				F317D9C02571E29F00BB5B09 /* ClosedViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -485,8 +494,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3ACF3892571495700BB4739 /* ViewController.swift in Sources */,
+				F317D9B72571DF6D00BB5B09 /* TabBarController.swift in Sources */,
+				F317D9C12571E29F00BB5B09 /* ClosedViewController.swift in Sources */,
 				F3ACF43B2571A9AA00BB4739 /* InactiveTaskCell.swift in Sources */,
 				F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */,
+				F317D9BC2571E0B500BB5B09 /* CurrentViewController.swift in Sources */,
 				F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */,
 				F3ACF3EC25719F7D00BB4739 /* MainViewController.swift in Sources */,
 				F3ACF4332571A96D00BB4739 /* ActiveTaskCell.swift in Sources */,
