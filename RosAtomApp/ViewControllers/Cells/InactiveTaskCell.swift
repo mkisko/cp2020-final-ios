@@ -7,11 +7,11 @@
 
 import UIKit
 
-class InactiveTaskCell: UITableViewCell {
+class InactiveTaskCell: ActiveTaskCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backgroundColor = UIColor(displayP3Red: 229, green: 234, blue: 241, alpha: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

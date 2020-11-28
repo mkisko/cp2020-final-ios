@@ -10,8 +10,14 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var allTasksCountLabel: UILabel!
+    @IBOutlet weak var currentTasksCountLabel: UILabel!
+    @IBOutlet weak var closedTasksCountLabel: UILabel!
     
-    private var tasks: [TaskModel]? = [TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00")]
+    private var allTasks: [TaskModel]? = [TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00"), TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00")]
+    private var currentTasks: [TaskModel]? = [TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00")]
+    private var closedTasks: [TaskModel]? = [TaskModel(isImportent: true, status: "Важно", description: "Работа по наладке оборудования для новых конденсационных турбин.", date: "25 ноября 10:30"), TaskModel(isImportent: true, status: "Важно", description: "Доложить начальнику участка о ходе выполнения работ.", date: "25 ноября 15:30"), TaskModel(isImportent: false, status: "", description: "Ежемесячный инструктаж по технике безопасности", date: "25 ноября 18:00")]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,10 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
+        
+        allTasksCountLabel.text = "\(allTasks?.count ?? 0)"
+        currentTasksCountLabel.text = "\(currentTasks?.count ?? 0)"
+        closedTasksCountLabel.text = "\(closedTasks?.count ?? 0)"
     }
 
     /*
@@ -54,7 +64,7 @@ extension MainViewController: UITableViewDelegate {
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks?.count ?? 0
+        return allTasks?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,7 +72,7 @@ extension MainViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let task = tasks?[indexPath.row] {
+        if let task = allTasks?[indexPath.row] {
             cell.descriptionLabel.text = task.description
             cell.DateLabel.text = task.date
             if task.isImportent {
