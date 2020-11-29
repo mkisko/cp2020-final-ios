@@ -15,6 +15,10 @@
 		F317D9C625723F0700BB5B09 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9C525723F0700BB5B09 /* NewTaskViewController.swift */; };
 		F317D9D32572610700BB5B09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317D9D22572610700BB5B09 /* DetailViewController.swift */; };
 		F317DA242572FBED00BB5B09 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F317DA232572FBED00BB5B09 /* Speech.framework */; };
+		F317DA292573082C00BB5B09 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317DA282573082C00BB5B09 /* DetailInterfaceController.swift */; };
+		F317DA312573098600BB5B09 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317DA302573098600BB5B09 /* TaskRow.swift */; };
+		F317DA3925730E4E00BB5B09 /* WatchTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F317DA3825730E4E00BB5B09 /* WatchTaskModel.swift */; };
+		F317DA402573307900BB5B09 /* LaunchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */; };
 		F3ACF3852571495700BB4739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3842571495700BB4739 /* AppDelegate.swift */; };
 		F3ACF3872571495700BB4739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3862571495700BB4739 /* SceneDelegate.swift */; };
 		F3ACF3892571495700BB4739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3882571495700BB4739 /* ViewController.swift */; };
@@ -30,7 +34,6 @@
 		F3ACF3AE2571495C00BB4739 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3AD2571495C00BB4739 /* NotificationController.swift */; };
 		F3ACF3B02571495C00BB4739 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3AF2571495C00BB4739 /* ComplicationController.swift */; };
 		F3ACF3B22571495E00BB4739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3ACF3B12571495E00BB4739 /* Assets.xcassets */; };
-		F3ACF3C6257153C100BB4739 /* LaunchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */; };
 		F3ACF3CE257158C000BB4739 /* TaskListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */; };
 		F3ACF3EC25719F7D00BB4739 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF3EB25719F7D00BB4739 /* MainViewController.swift */; };
 		F3ACF4332571A96D00BB4739 /* ActiveTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ACF4322571A96D00BB4739 /* ActiveTaskCell.swift */; };
@@ -96,6 +99,9 @@
 		F317D9C525723F0700BB5B09 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 		F317D9D22572610700BB5B09 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F317DA232572FBED00BB5B09 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.1.sdk/System/Library/Frameworks/Speech.framework; sourceTree = DEVELOPER_DIR; };
+		F317DA282573082C00BB5B09 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
+		F317DA302573098600BB5B09 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		F317DA3825730E4E00BB5B09 /* WatchTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTaskModel.swift; sourceTree = "<group>"; };
 		F3ACF3812571495700BB4739 /* RosAtomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosAtomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3ACF3842571495700BB4739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3ACF3862571495700BB4739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,12 +236,15 @@
 				F3ACF3A92571495C00BB4739 /* NewTaskInterfaceController.swift */,
 				F3ACF3C5257153C100BB4739 /* LaunchInterfaceController.swift */,
 				F3ACF3CD257158C000BB4739 /* TaskListInterfaceController.swift */,
+				F317DA282573082C00BB5B09 /* DetailInterfaceController.swift */,
+				F317DA302573098600BB5B09 /* TaskRow.swift */,
 				F3ACF3AB2571495C00BB4739 /* ExtensionDelegate.swift */,
 				F3ACF3AD2571495C00BB4739 /* NotificationController.swift */,
 				F3ACF3AF2571495C00BB4739 /* ComplicationController.swift */,
 				F3ACF3B12571495E00BB4739 /* Assets.xcassets */,
 				F3ACF3B32571495E00BB4739 /* Info.plist */,
 				F3ACF3B42571495E00BB4739 /* PushNotificationPayload.apns */,
+				F317DA3825730E4E00BB5B09 /* WatchTaskModel.swift */,
 			);
 			path = "RosAtomApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -523,11 +532,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3ACF3AE2571495C00BB4739 /* NotificationController.swift in Sources */,
-				F3ACF3C6257153C100BB4739 /* LaunchInterfaceController.swift in Sources */,
 				F3ACF3CE257158C000BB4739 /* TaskListInterfaceController.swift in Sources */,
+				F317DA312573098600BB5B09 /* TaskRow.swift in Sources */,
 				F3ACF3B02571495C00BB4739 /* ComplicationController.swift in Sources */,
 				F3ACF3AC2571495C00BB4739 /* ExtensionDelegate.swift in Sources */,
 				F3ACF3AA2571495C00BB4739 /* NewTaskInterfaceController.swift in Sources */,
+				F317DA292573082C00BB5B09 /* DetailInterfaceController.swift in Sources */,
+				F317DA3925730E4E00BB5B09 /* WatchTaskModel.swift in Sources */,
+				F317DA402573307900BB5B09 /* LaunchInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

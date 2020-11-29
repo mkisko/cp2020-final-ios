@@ -6,10 +6,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17035"/>
     </dependencies>
     <scenes>
-        <!--Launch Interface Controller-->
+        <!--launch-->
         <scene sceneID="ybU-yo-GOJ">
             <objects>
-                <controller id="zVq-dF-Dr3" customClass="LaunchInterfaceController" customModule="RosAtomApp_WatchKit_Extension">
+                <controller identifier="launch" id="zVq-dF-Dr3" customClass="LaunchInterfaceController" customModule="RosAtomApp_WatchKit_Extension">
                     <items>
                         <group width="136" height="53" alignment="center" id="A3O-xV-lTg">
                             <items>
@@ -19,7 +19,7 @@
                                         <segue destination="gN3-Mr-Xv6" kind="push" id="4AY-9J-LfR"/>
                                     </connections>
                                 </button>
-                                <button width="70" height="70" alignment="left" backgroundImage="plus" catalog="system" id="Wls-Yl-Ugp">
+                                <button width="70" height="70" alignment="left" backgroundImage="plus.circle.fill" catalog="system" id="Wls-Yl-Ugp">
                                     <color key="backgroundColor" red="0.086604930459999993" green="0.22544249890000001" blue="0.49806904790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <segue destination="AgC-eL-Hgc" kind="modal" id="d93-Hk-5gy"/>
@@ -55,25 +55,47 @@
             <objects>
                 <controller id="gN3-Mr-Xv6" customClass="TaskListInterfaceController" customModule="RosAtomApp_WatchKit_Extension">
                     <items>
-                        <switch width="1" alignment="left" value="YES" title="Важные" id="D8I-Sd-vDt">
-                            <connections>
-                                <action selector="switch:" destination="gN3-Mr-Xv6" id="7iv-i5-4n2"/>
-                            </connections>
-                        </switch>
-                        <table alignment="left" id="SKs-gZ-lge">
+                        <table alignment="left" id="rZm-tD-NsC">
                             <items>
-                                <tableRow id="1XS-Rs-RyR">
-                                    <group key="rootItem" width="1" alignment="left" id="jAq-La-rOh"/>
+                                <tableRow identifier="TaskRow" id="gE7-zF-7lg" customClass="TaskRow" customModule="RosAtomApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="amN-Y8-teS">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="l5I-4p-8tO"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="l5I-4p-8tO" id="cSf-ju-ItJ"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
-                        <outlet property="tableView" destination="SKs-gZ-lge" id="xsu-xH-I5i"/>
+                        <outlet property="tableView" destination="rZm-tD-NsC" id="sa1-vS-Kdq"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="155" y="74"/>
+        </scene>
+        <!--detail-->
+        <scene sceneID="Jmn-Aq-o94">
+            <objects>
+                <controller identifier="detail" id="JdE-dH-eeY" customClass="DetailInterfaceController" customModule="RosAtomApp_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="Label" textAlignment="left" numberOfLines="0" id="0Fb-0c-Vy2"/>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Выполнено" id="4Xm-LR-xEs">
+                            <connections>
+                                <action selector="completeButton" destination="JdE-dH-eeY" id="Kn0-nu-RMM"/>
+                                <segue destination="zVq-dF-Dr3" kind="push" id="r8D-bt-9Qg"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="0Fb-0c-Vy2" id="zXG-bg-hh1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="374.41975308641975" y="73.781725888324871"/>
         </scene>
         <!--New Task Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -83,15 +105,24 @@
                         <textField width="1" height="91" alignment="center" placeholder="Введите текст" id="rr8-gN-lOq"/>
                         <group width="1" alignment="center" verticalAlignment="bottom" id="L59-AJ-YOC">
                             <items>
-                                <button width="60" height="60" alignment="center" verticalAlignment="bottom" backgroundImage="paperplane.circle" catalog="system" id="syE-Mp-aYr">
+                                <button width="70" height="60" alignment="center" verticalAlignment="bottom" backgroundImage="paperplane.fill" catalog="system" id="syE-Mp-aYr">
                                     <color key="backgroundColor" red="0.086604930459999993" green="0.22544249890000001" blue="0.49806904790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="sendButton" destination="AgC-eL-Hgc" id="Oa4-2a-knP"/>
+                                    </connections>
                                 </button>
-                                <button width="60" height="60" alignment="center" verticalAlignment="bottom" backgroundImage="trash.circle.fill" catalog="system" id="AC1-yy-QpD">
+                                <button width="70" height="60" alignment="center" verticalAlignment="bottom" backgroundImage="trash.circle.fill" catalog="system" id="AC1-yy-QpD">
                                     <color key="backgroundColor" red="0.086604930459999993" green="0.22544249890000001" blue="0.49806904790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="clearButton" destination="AgC-eL-Hgc" id="Iql-8C-EYP"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="textField" destination="rr8-gN-lOq" id="qNm-FU-1UY"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="155" y="-326.5"/>
@@ -99,11 +130,12 @@
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <notificationController animationDuration="2" id="YCC-NB-fut">
                     <items>
                         <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <color key="backgroundColor" red="0.42745098040000001" green="0.67450980390000004" blue="0.87058823529999996" alpha="0.56418557359999999" colorSpace="custom" customColorSpace="displayP3"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
@@ -116,14 +148,20 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="RosAtomApp_WatchKit_App" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="RosAtomApp_WatchKit_App" customModuleProvider="target">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="RosAtomApp_WatchKit_App" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="RosAtomApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Перейти" id="A4q-wm-VeW"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
@@ -133,8 +171,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.number" catalog="system" width="128" height="99"/>
-        <image name="paperplane.circle" catalog="system" width="128" height="121"/>
-        <image name="plus" catalog="system" width="128" height="116"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

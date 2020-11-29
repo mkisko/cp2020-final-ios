@@ -7,6 +7,7 @@
 
 import UIKit
 import Speech
+import UserNotifications
 class NewTaskViewController: UIViewController {
 
     var pickerValue: String = ""
@@ -21,25 +22,44 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var priorityPicker: UIPickerView!
     @IBOutlet weak var createButton: UIButton!
     @IBAction func createButtonTapped(_ sender: UIButton) {
-        let title = titleField.text
-        let description = descriptionTextView.text
-        let hours = Int(timeSlider.value)
-        let status = pickerValue
-        let isImportent: Bool
-        let time = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ru_RU")
-        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
-        let date = dateFormatter.string(from: time)
+//        let title = titleField.text
+//        let description = descriptionTextView.text
+//        let hours = Int(timeSlider.value)
+//        let status = pickerValue
+//        let isImportent: Bool
+//        let time = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale(identifier: "ru_RU")
+//        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
+//        let date = dateFormatter.string(from: time)
         
-        
-        if status == "Нет" {
-            isImportent = false
-        } else {
-            isImportent = true
-        }
+//
+//        if status == "Нет" {
+//            isImportent = false
+//        } else {
+//            isImportent = true
+//        }
 //        let task = TaskModel(isImportent: isImportent, status: status, title: title ?? "", description: description ?? "", owner: "Карпов К.А.", comments: [], hours: hours, date: date)
 //
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 3
+        dateComponents.minute = 38
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+        //Set your content
+        let content = UNMutableNotificationContent()
+        content.title = "Your notification title"
+        content.body = "Your notification body"
+
+        let request = UNNotificationRequest(
+            identifier: "yourIdentifier", content: content, trigger: trigger
+        )
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+        
+        
+        
         
         let ok = UIAlertAction(title: "Продолжить", style: .default) { [weak self] (ok) in
             self?.tabBarController?.selectedIndex = 0
@@ -55,6 +75,10 @@ class NewTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
+        UNUserNotificationCenter.current().requestAuthorization(
+            options: [.alert, .sound, .badge], completionHandler: {userDidAllow, error in
+            //if userDidAllow : do something if you want to
+        })
     }
     
     private func setupSubviews() {
