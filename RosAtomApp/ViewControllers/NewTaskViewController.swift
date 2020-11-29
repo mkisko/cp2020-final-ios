@@ -8,6 +8,8 @@
 import UIKit
 import Speech
 import UserNotifications
+import Alamofire
+
 class NewTaskViewController: UIViewController {
 
     var pickerValue: String = ""
@@ -39,7 +41,7 @@ class NewTaskViewController: UIViewController {
 //        } else {
 //            isImportent = true
 //        }
-//        let task = TaskModel(isImportent: isImportent, status: status, title: title ?? "", description: description ?? "", owner: "Карпов К.А.", comments: [], hours: hours, date: date)
+//
 //
         
         var dateComponents = DateComponents()
@@ -157,4 +159,9 @@ extension NewTaskViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             return priorityArray[row]
         }
     }
+}
+
+extension NewTaskViewController {
+    
+    func sendTask
 }
