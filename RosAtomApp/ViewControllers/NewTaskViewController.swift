@@ -24,9 +24,9 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var priorityPicker: UIPickerView!
     @IBOutlet weak var createButton: UIButton!
     @IBAction func createButtonTapped(_ sender: UIButton) {
-//        let title = titleField.text
-//        let description = descriptionTextView.text
-//        let hours = Int(timeSlider.value)
+        let title = titleField.text
+        let description = descriptionTextView.text
+        let hours = Int(timeSlider.value)
 //        let status = pickerValue
 //        let isImportent: Bool
 //        let time = Date()
@@ -34,34 +34,13 @@ class NewTaskViewController: UIViewController {
 //        dateFormatter.locale = Locale(identifier: "ru_RU")
 //        dateFormatter.dateFormat = "dd MMMM yyyy HH:mm"
 //        let date = dateFormatter.string(from: time)
-        
-//
-//        if status == "Нет" {
-//            isImportent = false
-//        } else {
-//            isImportent = true
-//        }
-//
-//
-        
-        var dateComponents = DateComponents()
-        dateComponents.hour = 3
-        dateComponents.minute = 38
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-
-        //Set your content
-        let content = UNMutableNotificationContent()
-        content.title = "Your notification title"
-        content.body = "Your notification body"
-
-        let request = UNNotificationRequest(
-            identifier: "yourIdentifier", content: content, trigger: trigger
-        )
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
-        
-        
-        
+        let params: [String: String] = ["title": title ?? "",
+                                     "description": description ?? "",
+                                     "status": "active",
+                                     "hours": String(hours),
+                                     "author": "4",
+                                     "persons": "5"]
+        sendTask(params: params)
         
         let ok = UIAlertAction(title: "Продолжить", style: .default) { [weak self] (ok) in
             self?.tabBarController?.selectedIndex = 0
@@ -163,5 +142,13 @@ extension NewTaskViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension NewTaskViewController {
     
-    func sendTask
-}
+    func sendTask(params: [String: String]) {
+        AF.request(urlConstant, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+            print(response.result)
+        }
+            
+        }
+    }
+
+
+let urlConstant = "http://135.181.146.40/api/tasks/list/"
